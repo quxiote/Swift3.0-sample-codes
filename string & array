@@ -1,0 +1,46 @@
+struct SomeStructure {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
+enum SomeEnumeration {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 6
+    }
+}
+class SomeClass {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 27
+    }
+    class var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+}
+
+
+var array1 = Array <Int>()
+var array2:[Int] = array1
+var array3 = array1
+
+
+//创建大量相同元素的数组
+//创建有10个String类型元素的数组，并且每个元素都为字符串"Hello"
+var threeInts = [Int](repeating: 1, count: 5)
+var threeChars = [String](repeating: "Hello", count: 5)
+
+var sixInts = threeInts + threeInts
+
+for item in sixInts.enumerated(){
+print(item)
+}
+
+print("")
+for item in threeChars.enumerated(){
+print(item)
+}
+
+var array4 = [String](repeating: "Hello", count: 10)
+var array5 = Array(repeating: 1, count: 10)
